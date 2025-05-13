@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سرویس‌های هوش مصنوعی | AI Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset & Fonts */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e0ecff, #f7faff);
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #0057d9;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card h2 {
+            color: #007BFF;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+
+        .service-card p {
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .auth-section {
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0057d9;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .form-buttons button {
+            padding: 12px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            flex: 1;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AI Services Hub</h1>
+    <p>سرویس‌های هوش مصنوعی پیشرفته برای آیندهٔ شما</p>
+</header>
+
+<section class="services">
+    <div class="service-card">
+        <h2>🌐 مترجم متنی و صوتی</h2>
+        <p>
+            با استفاده از آخرین الگوریتم‌های NLP و ASR، می‌توانید متون و فایل‌های صوتی خود را به راحتی به هر زبانی ترجمه کنید.
+            این سرویس برای کسب‌وکارها، دانشجویان و محققان بسیار مناسب است.
+        </p>
+        <a href="#login" class="button">ورود به سرویس</a>
+    </div>
+
+    <div class="service-card">
+        <h2>🎭 جعل عمیق (Deepfake)</h2>
+        <p>
+            این سرویس قدرتمند امکان ایجاد تصاویر، صداها و حتی ویدئوهای واقع‌گونه را فراهم می‌کند.
+            از این سرویس برای تولید محتوا، بازی‌های تعاملی و فیلم‌برداری بدون نیاز به بازیگر استفاده کنید.
+        </p>
+        <a href="#register" class="button">ثبت‌نام برای دسترسی</a>
+    </div>
+</section>
+
+<section class="auth-section" id="login">
+    <h2>🔐 ورود به حساب کاربری</h2>
+    <form>
+        <input type="email" placeholder="ایمیل خود را وارد کنید" required>
+        <input type="password" placeholder="رمز عبور" required>
+        <div class="form-buttons">
+            <button type="submit">ورود</button>
+            <button type="button" style="background-color: #28a745;">ثبت‌نام</button>
+        </div>
+    </form>
+</section>
+
+<footer>
+    تمامی حقوق محفوظ است &copy; {{ current_year }}
+</footer>
+
+</body>
+</html>
