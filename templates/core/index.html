@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE HTML>
 <html>
 
@@ -8,26 +9,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Favicon -->
-    <link rel="icon" href="images/logo.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
     
-    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
 </head>
 
 <body>
 
     <!-- Header -->
     <header id="header" class="alt">
-		
         <div class="logo"><span></span></a></div>
-        <div class="logo1"><a href="profile.html"><img src="images/profile1.png"><span></span></a></div>
+        <div class="logo1"><a href="profile.html"><img src="{% static 'images/profile1.png' %}"><span></span></a></div>
         <a href="#menu" dir="rtl"> فهرست</a>
     </header>
 
     <!-- Nav -->
     <nav id="menu" dir="rtl">
         <ul class="links">
-            <li><a href="index.html">صفحه اصلی</a></li>
+            <li><a href="/">صفحه اصلی</a></li>
             <li><a href="generic.html">لیست سرویس‌ها</a></li>
             <li><a href="elements.html">ارتباط با ما</a></li>
         </ul>
@@ -36,7 +37,7 @@
     <!-- Banner -->
     <section class="banner full">
         <article>
-            <img src="images/img12.png" alt="" width="1440" height="961">
+            <img src="{% static 'images/img12.png' %}" alt="" width="1440" height="961">
             <div class="inner">
                 <header>
                     <p><a href="https://templated.co "></a></p>
@@ -45,7 +46,7 @@
             </div>
         </article>
         <article>
-            <img src="images/poster.jpg" alt="" width="1440" height="961">
+            <img src="{% static 'images/poster.jpg' %}" alt="" width="1440" height="961">
             <div class="inner">
                 <header>
                     <p></p>
@@ -54,7 +55,7 @@
             </div>
         </article>
         <article>
-            <img src="images/poster2.jpg" alt="" width="1440" height="961">
+            <img src="{% static 'images/poster2.jpg' %}" alt="" width="1440" height="961">
             <div class="inner">
                 <header>
                     <p></p>
@@ -72,7 +73,7 @@
                 <div dir="rtl">
                     <div class="box">
                         <div class="image fit">
-                            <img src="images\translate.png" alt="" width="600" height="300">
+                            <img src="{% static 'images/translate.png' %}" alt="" width="600" height="300">
                         </div>
                         <div class="content">
                             <header class="align-center">
@@ -90,7 +91,7 @@
                 <div dir="rtl">
                     <div class="box">
                         <div class="image fit">
-                            <img src="images\deepfake.jpeg" alt="" width="600" height="300">
+                            <img src="{% static 'images/deepfake.jpeg' %}" alt="" width="600" height="300">
                         </div>
                         <div class="content">
                             <header class="align-center">
@@ -108,7 +109,7 @@
                 <div>
                     <div class="box">
                         <div class="image fit">
-                            <img src="images\translate.png" alt="" width="600" height="300">
+                            <img src="{% static 'images/translate.png' %}" alt="" width="600" height="300">
                         </div>
                         <div class="content">
                             <header class="align-center">
@@ -126,7 +127,7 @@
                 <div>
                     <div class="box">
                         <div class="image fit">
-                            <img src="images\translate.png" alt="" width="600" height="300">
+                            <img src="{% static 'images/translate.png' %}" alt="" width="600" height="300">
                         </div>
                         <div class="content">
                             <header class="align-center">
@@ -155,22 +156,22 @@
             <div class="gallery">
                 <div>
                     <div class="image fit">
-                        <a href="#"><img src="images/pic01.jpg" alt="" width="600" height="300"></a>
+                        <a href="#"><img src="{% static 'images/translate.png' %}" alt="" width="600" height="300"></a>
                     </div>
                 </div>
                 <div>
                     <div class="image fit">
-                        <a href="#"><img src="images/pic02.jpg" alt="" width="600" height="300"></a>
+                        <a href="#"><img src="{% static 'images/translate.png' %}" alt="" width="600" height="300"></a>
                     </div>
                 </div>
                 <div>
                     <div class="image fit">
-                        <a href="#"><img src="images/pic03.jpg" alt="" width="600" height="300"></a>
+                        <a href="#"><img src="{% static 'images/translate.png' %}" alt="" width="600" height="300"></a>
                     </div>
                 </div>
                 <div>
                     <div class="image fit">
-                        <a href="#"><img src="images/pic04.jpg" alt="" width="600" height="300"></a>
+                        <a href="#"><img src="{% static 'images/translate.png' %}" alt="" width="600" height="300"></a>
                     </div>
                 </div>
             </div>
@@ -181,8 +182,14 @@
     <footer id="footer">
         <div class="container">
             <ul class="icons">
-                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li>
+                    <a href="#" class="icon">
+                    <img src="{% static 'images/icon/eitaa.svg' %}" 
+                        alt="ایتا" 
+                        style="width: 28px; height: 28px; filter: brightness(0) invert(1);">
+                    <span class="label">eitaa</span>
+                    </a>
+                </li>
                 <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
                 <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
             </ul>
@@ -190,11 +197,11 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'assets/js/skel.min.js' %}"></script>
+    <script src="{% static 'assets/js/util.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
 
 </body>
 
