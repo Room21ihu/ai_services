@@ -1,5 +1,9 @@
+from django.http import HttpResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.views import View
+from django.shortcuts import render
+
 
 class ServiceListAPI(APIView):
     def get(self, request):
@@ -28,9 +32,12 @@ class ServiceListAPI(APIView):
         return Response(services)
 
 
-from django.views import View
-from django.shortcuts import render
 
+class HomeView(View):
+    def get(self , request):
+        return render(request, 'core/index.html')
+        pass
+    
 class ServiceListHTML(View):
     def get(self, request):
         services = [
@@ -55,4 +62,4 @@ class ServiceListHTML(View):
                 "endpoint": "/subscription/"
             }
         ]
-        return render(request, 'core/services.html', {'services': services})
+        return render(request, 'core/index.html', {'services': services})
